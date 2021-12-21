@@ -129,7 +129,6 @@ public class SystemLogAspect {
             // logDTO写入异常信息
             List<LogDTO> logDTOList = LOGDTO_THREAD_LOCAL.get();
             logDTOList.forEach(logDTO -> {
-                log.info("1111111111111111111111111111111111111111111111111111111111111");
                 logDTO.setSuccess(false);
                 logDTO.setException(throwable.getMessage());
             });
